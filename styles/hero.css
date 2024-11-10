@@ -1,0 +1,147 @@
+#hero {
+  height: 100vh;
+  width: 100%;
+  background: url(../Images/Hero_back.png);
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px 50px 0 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hero .right {
+  width: 50%;
+}
+
+#hero .right h1 {
+  font-size: clamp(20px, 3.5vw, 6vw);
+  color: var(--clr1);
+}
+
+#hero .right h1 span,
+#hero .right h2 span {
+  background: linear-gradient(120deg, var(--clr4), var(--clr1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hero .right h2 {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: clamp(14px, 2.5vw, 4vw);
+  color: var(--clr1);
+}
+
+#hero .right .intro {
+  color: var(--clr1);
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  text-transform: capitalize;
+}
+
+#hero .right .btn {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#hero .right .btn button {
+  height: 40px;
+  width: 150px;
+  text-transform: capitalize;
+  background-color: var(--clr2);
+  color: var(--clr1);
+  font-weight: 400;
+  transition: 0.4s;
+  cursor: pointer;
+  outline: transparent;
+  border: none;
+}
+#hero .right .btn button a{
+  color: #fff;
+  text-decoration: none;
+}
+
+#hero .right .btn #active {
+  background-color: var(--clr4);
+  color: var(--clr2);
+}
+
+#hero .right .btn #active a {
+  color: #000;
+  text-decoration: none;
+}
+
+#hero .right .btn button:hover {
+  scale: 1.05;
+  font-weight: 500;
+}
+
+/* Responsive styles for #hero section on screens with max width of 480px */
+@media (max-width: 480px) {
+  #hero {
+    background: url(../Images/Hero_back_2.png);
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px 30px 20px; /* Adjusted padding for smaller screens */
+  }
+
+  #hero .right {
+    width: 100%; /* Full width for the text section */
+  }
+
+  #hero .right h1 {
+    font-size: 27px; /* Adjusted heading size */
+  }
+
+  #hero .right h2 {
+    font-size: 15px; /* Smaller font size for subheading */
+  }
+
+  #hero .right .intro {
+    font-size: 12px; /* Smaller font size for intro text */
+    width: 100%; /* Full width for better readability */
+  }
+
+  #hero .right .btn button {
+    width: 120px; /* Adjusted button width for smaller screens */
+    font-size: 14px; /* Smaller font size for button text */
+  }
+}
+
+/* Responsive styles for #hero section on screens with max width of 320px */
+@media (max-width: 320px) {
+  #hero {
+    padding: 50px 10px 20px 10px; /* Further reduced padding */
+  }
+
+  #hero .right {
+    width: 100%; /* Full width for the right content */
+  }
+
+  #hero .right h1 {
+    font-size: 20px; /* Smaller heading font size */
+  }
+
+  #hero .right h2 {
+    font-size: 13px; /* Smaller subheading font size */
+  }
+
+  #hero .right .intro {
+    font-size: 10px; /* Smaller intro font size */
+  }
+
+  #hero .right .btn {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Increased gap between buttons */
+  }
+
+  #hero .right .btn button {
+    width: 100%; /* Full width for buttons */
+    font-size: 12px; /* Smaller button font size */
+    height: 35px; /* Smaller button height */
+  }
+}

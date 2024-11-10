@@ -1,0 +1,281 @@
+#project {
+  padding: 30px 50px;
+  background: linear-gradient(120deg, #e75682, #3caaf3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#project h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  color: #e7db2b;
+}
+
+#project p {
+  color: #fff;
+}
+
+#project .slide_container {
+  height: 73vh;
+  width: calc(350px * 3 + 20px); /* Default: Show 3 items */
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap effect for better scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+#project .slide_container .item {
+  background: #dfdfdf;
+  height: 220px;
+  width: 350px;
+  position: relative;
+  background-position: center;
+  cursor: pointer;
+  background-size: cover;
+  transition: .2s ease all;
+  border-radius: 3px;
+  flex: 0 0 auto; /* Maintain item width */
+  scroll-snap-align: center; /* Center each item when scrolled */
+}
+
+#project .slide_container .item img {
+  height: 200px;
+  transition: .5s ease all;
+  position: absolute;
+  top: 34%;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  width: 320px;
+}
+
+#project .slide_container .item .content {
+  height: 100px;
+  width: 80%;
+  opacity: 0;
+  transition: 1s all ease;
+  position: absolute;
+  bottom: 0;
+  padding: 5px 20px;
+}
+
+#project .slide_container .item .content h2 {
+  font-size: 25px;
+  color: #2c2757;
+  text-transform: capitalize;
+}
+
+#project .slide_container .item .content .desc {
+  font-size: 12px;
+  width: 100%;
+}
+
+#project .slide_container .item .content .btn a {
+  height: 30px;
+  width: 150px;
+  background-color: #2c2757;
+  display:flex;
+  text-decoration: none;
+  align-items:center;
+  justify-content:center;
+  color: #fff;
+  margin-top: 5px;
+  border-radius: 4px;
+  outline: transparent;
+  cursor: pointer;
+  border: transparent;
+}
+
+#project .slide_container .item .content .btn a:hover {
+  background-color: #4b467a;
+}
+
+#project .slide_container .item:hover .content {
+  opacity: 1;
+}
+
+#project .slide_container .item:hover img {
+  top: 5%;
+}
+
+#project .buttons button {
+  color: #fffffff6;
+  font-size: 70px;
+  outline: transparent;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#project .buttons button:hover {
+  color: #ffffff;
+}
+
+#project .buttons .prev {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+}
+
+#project .buttons .next {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+}
+
+#project .all_projects a {
+  color: #2c2757;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  outline: transparent;
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #project h1 {
+    font-size: 40px;
+  }
+
+  #project .slide_container {
+    width: calc(350px * 2 + 20px); /* Show 2 items on medium screens */
+  }
+
+  #project .buttons button {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #project h1 {
+    font-size: 35px;
+  }
+
+  #project .slide_container {
+    width: calc(350px * 1 + 20px); /* Show 1 item on smaller screens */
+  }
+
+  #project .buttons button {
+    font-size: 40px;
+  }
+}/* Responsive Design for screens with max-width 480px */
+@media (max-width: 480px) {
+  #project{
+    height: 70vh !important;
+  }
+  #project h1 {
+    font-size: 30px;
+  }
+
+  #project .slide_container {
+    width: 100%; /* Take up full width */
+    height: 60vh;
+    gap: 5px; /* Reduced gap */
+  }
+
+  #project .slide_container .item {
+    width: 100%; /* Each item takes up 100% width */
+    height: 220px; /* Adjust height */
+  }
+
+  #project .slide_container .item .content {
+    padding: 3px 20px !important;
+  }
+
+  #project .slide_container .item img {
+    width: 90%; /* Decrease width to 90% of the container */
+    height: 90%; /* Adjust height to match the item */
+  }
+
+  #project .slide_container .item .content h2 {
+    font-size: 18px;
+  }
+
+  #project .slide_container .item .content .desc {
+    font-size: 10px;
+  }
+
+  #project .slide_container .item .content .btn button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #project .buttons button {
+    font-size: 40px;
+  }
+
+  #project .buttons .prev,
+  #project .buttons .next {
+    display: none; /* Hide buttons on small screens */
+  }
+}
+
+/* Responsive Design for screens with max-width 320px */
+@media (max-width: 320px) {
+  #project {
+    padding: 20px 10px;
+  }
+
+  #project h1 {
+    font-size: 24px;
+  }
+
+  #project p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #project .slide_container {
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+  }
+
+  #project .slide_container .item {
+    width: 250px; /* Adjusted for smaller screens */
+    height: 170px;
+  }
+
+  #project .slide_container .item .content {
+    padding: 3px 20px !important;
+  }
+
+  #project .slide_container .item img {
+    width: 80%; /* Decrease width further for 320px screens */
+    height: auto; /* Keep aspect ratio */
+  }
+
+  #project .slide_container .item .content h2 {
+    font-size: 16px;
+  }
+
+  #project .slide_container .item .content .desc {
+    font-size: 9px;
+  }
+
+  #project .slide_container .item .content .btn button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #project .buttons button {
+    font-size: 35px; /* Smaller icons for mobile */
+  }
+
+  #project .all_projects a {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}

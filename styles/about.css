@@ -1,0 +1,116 @@
+#about {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px 50px 50px;
+  gap: 30px;
+}
+
+#about .right .img img {
+  height: 350px;
+  width: 350px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--clr3), var(--clr4));
+  border-radius: 41% 59% 49% 51% / 36% 40% 60% 64%;
+  box-shadow: 0 0 2px var(--clr1);
+  animation: animate 3s infinite;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 41% 59% 49% 51% / 36% 40% 60% 64%;
+  }
+  50% {
+    border-radius: 52% 48% 60% 40% / 45% 33% 67% 55%;
+  }
+  100% {
+    border-radius: 41% 59% 49% 51% / 36% 40% 60% 64%;
+  }
+}
+
+#about .left {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#about .left h1 {
+  font-size: clamp(20px, 3.5vw, 6vw);
+  color: var(--clr3);
+}
+
+#about .left p {
+  color: var(--clr2);
+  letter-spacing: 1px;
+  font-size: 16px;
+  width: 80%;
+}
+
+#about .left p span {
+  color: var(--clr3);
+}
+
+/* Responsive styles for #about section on screens with max width of 480px */
+@media (max-width: 480px) {
+  #about {
+    flex-direction: column;
+    padding: 80px 20px 40px 20px !important; /* Adjusted padding */
+    gap: 20px;
+  }
+
+  #about .right .img img {
+    height: 250px; /* Slightly smaller image for 480px screens */
+    width: 250px;
+    padding: 5px;
+  }
+
+  #about .left {
+    align-items: center; /* Center-align text */
+    gap: 20px;
+  }
+
+  #about .left h1 {
+    font-size: 26px; /* Adjusted heading font size */
+  }
+
+  #about .left p {
+    font-size: 15px; /* Slightly smaller font size for paragraph */
+    width: 90%; /* More space for text */
+  }
+}
+
+/* Responsive styles for #about section on screens with max width of 320px */
+@media (max-width: 320px) {
+  #about {
+    flex-direction: column;
+    padding: 50px 10px 20px 10px !important; /* Reduce padding */
+    gap: 20px;
+  }
+
+  #about .right .img img {
+    height: 200px; /* Smaller image height */
+    width: 200px;  /* Smaller image width */
+    padding: 3px;
+  }
+
+  #about .left {
+    align-items: center; /* Center-align text */
+    gap: 15px;
+  }
+
+  #about .left h1 {
+    font-size: 24px; /* Smaller font for heading */
+  }
+
+  #about .left p {
+    font-size: 14px; /* Smaller font size for paragraph */
+    width: 100%; /* Full width for better readability */
+  }
+}

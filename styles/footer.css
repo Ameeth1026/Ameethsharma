@@ -1,0 +1,57 @@
+#footer .social_link {
+  display: flex;
+  gap: 10px;
+}
+#footer .social_link a {
+  color: rgb(63, 63, 63);
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .link a {
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+#footer .link a:hover {
+  color: #d3d3d3;
+}
+#footer .down {
+  border-top: 1px solid #e7e7e7;
+  font-size: 12px;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  color: #d3d3d3;
+}
+
+/* Responsive styles for footer on screens with max width of 320px */
+@media (max-width: 320px) {
+  #footer .social_link {
+    gap: 5px; /* Reduce gap between social icons */
+    justify-content: center; /* Center align the icons */
+  }
+
+  #footer .social_link a {
+    font-size: 16px; /* Smaller icon size */
+    height: 24px;
+    width: 24px;
+  }
+
+  #footer .link a {
+    font-size: 12px; /* Smaller font for links */
+    padding: 2px 6px;
+  }
+
+  #footer .down {
+    font-size: 10px; /* Smaller text for copyright or other small info */
+    padding: 3px;
+  }
+}

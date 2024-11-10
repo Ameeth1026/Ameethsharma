@@ -1,0 +1,191 @@
+#contact {
+  width: 100%;
+  padding: 85px 50px;
+  background:linear-gradient(120deg,#4456f8,#fff134);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact .top {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#contact .top h1 {
+  text-shadow: 0 0 2px #2d2d2d;
+  color: var(--clr1);
+  font-size: 70px;
+}
+
+#contact .top p {
+  color: var(--clr2);
+}
+#contact form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
+}
+
+#contact .bottom .user {
+  background-color: var(--clr1);
+  padding: 0 10px;
+  width: 100%;
+  box-shadow: 0 0 2px var(--clr2);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 3px;
+  color: var(--clr3);
+}
+
+#contact .bottom .user input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  letter-spacing: 1.1px;
+  outline: transparent;
+  font-size: 15px;
+  background-color: transparent;
+  border: transparent;
+}
+
+#contact .bottom .message {
+  align-items: flex-start;
+  padding: 10px;
+  width: 100%;
+}
+
+#contact .bottom .message textarea {
+  height: 150px;
+  width: 100%;
+  padding: 0 10px;
+  outline: transparent;
+  font-size: 15px;
+  background-color: transparent;
+  border: transparent;
+  resize: none;
+}
+
+#contact .bottom .btn button {
+  background-color: var(--clr3);
+  color: var(--clr1);
+  border: transparent;
+  height: 44px;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  width: 170px;
+  transition: 0.3s all ease;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+#contact .bottom .btn button:hover {
+  background-color: var(--clr3);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  #contact {
+    padding: 60px 30px;
+  }
+  #contact .top h1 {
+    font-size: 50px;
+  }
+  #contact .bottom {
+    max-width: 600px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #contact {
+    padding: 50px 20px;
+  }
+  #contact .top h1 {
+    font-size: 40px;
+  }
+  #contact .bottom .user,
+  #contact .bottom .message textarea {
+    font-size: 14px;
+  }
+  #contact .bottom .btn button {
+    width: 150px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  #contact {
+    padding: 40px 15px;
+  }
+  #contact .top h1 {
+    font-size: 32px;
+  }
+  #contact .top p {
+    font-size: 14px;
+  }
+  #contact .bottom {
+    align-items: center;
+  }
+  #contact .bottom .user,
+  #contact .bottom .message textarea {
+    font-size: 12px;
+  }
+  #contact .bottom .btn button {
+    width: 130px;
+    font-size: 12px;
+  }
+}
+
+
+/* Mobile devices with max width of 320px */
+@media (max-width: 320px) {
+  #contact {
+    padding: 30px 10px;
+  }
+  #contact .top h1 {
+    font-size: 26px;
+  }
+  #contact .top p {
+    font-size: 12px;
+  }
+  #contact .bottom {
+    align-items: center;
+  }
+  #contact .bottom .user,
+  #contact .bottom .message textarea {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+  #contact .bottom .user input {
+    height: 35px;
+    font-size: 12px;
+  }
+  #contact .bottom .message textarea {
+    height: 120px;
+  }
+  #contact .bottom .btn button {
+    width: 120px;
+    font-size: 11px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,80 @@
+#scroll {
+  width: 100%;
+  padding: 20px 50px;
+}
+.scroll {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.scroll .items {
+  height: 50px;
+  border-radius: 4px;
+  width: 170px;
+  position: absolute;
+  left: max(calc(170px * 8), 100%);
+  animation: scrollleft 30s linear infinite;
+}
+.scroll .items img {
+  height: 50px;
+  object-fit: cover;
+  width: 170px;
+}
+@keyframes scrollleft {
+  to {
+    left: -170px;
+  }
+}
+
+.scroll .item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.scroll .item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+.scroll .item3 {
+  margin-top: 10px;
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+.scroll .item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+.scroll .item5 {
+  margin-bottom: 20px;
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+.scroll .item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+.scroll .item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+.scroll .item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+footer {
+  height: 30vh;
+  background-color: rgb(63, 63, 63);
+}
+footer #footer {
+  height: 100%;
+  padding: 50px 50px 10px 50px;
+  color: #ffffff;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
